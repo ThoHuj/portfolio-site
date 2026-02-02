@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import HeaderContainer from './components/Header.tsx'
+import PageContent from "./components/PageContent.tsx"
 
 function App() {
   const [message, setMessage] = useState<string>("Hämtar data...")
@@ -17,10 +19,10 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <h1>Thom Om Thunder Hujanen</h1>
-      <p>{message}</p>
-    </div>
+    <> 
+      <HeaderContainer title="Thom's Portfolio" subtitle="This is my portfolio!"></HeaderContainer>
+      <PageContent content={message}></PageContent>
+    </>
   )
 }
 
