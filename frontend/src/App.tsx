@@ -1,27 +1,36 @@
-import { useEffect, useState } from 'react'
-import HeaderContainer from './components/Header.tsx'
-import PageContent from "./components/PageContent.tsx"
+/* import { useEffect, useState } from "react" */
+import HeaderContainer from "./components/Header.tsx"
+import ContentArea from "./components/ContentArea.tsx"
+import Article from "./components/Article.tsx"
+import NavbarContainer from "./components/Navbar.tsx"
+import GameDevPost from "./assets/GameDevPost.mdx"
 
 function App() {
-  const [message, setMessage] = useState<string>("Hämtar data...")
-
-  useEffect(() => {
-    // Försök hämta data från backend
-    fetch("http://localhost:8000/")
-      .then((response) => response.json())
-      .then((data) => {
-        setMessage(data.message) // Sätter texten från backend (om det lyckas)
-      })
-      .catch((error) => {
-        console.error("Fel vid hämtning:", error)
-        setMessage("Kunde inte nå backend!")
-      })
-  }, [])
+  /*   const [message, setMessage] = useState<string>("Fetching data...")
+  
+    useEffect(() => {
+      fetch("http://localhost:8000/")
+        .then((response) => response.json())
+        .then((data) => {
+          setMessage(data.message)
+        })
+        .catch((error) => {
+          console.error("Fetching data failed:", error)
+          setMessage("Failed to fetch data from backend!")
+        })
+    }, []) */
 
   return (
-    <> 
-      <HeaderContainer title="Thom's Portfolio" subtitle="This is my portfolio!"></HeaderContainer>
-      <PageContent content={message}></PageContent>
+    <>
+      <HeaderContainer title="Thom Hujanen"></HeaderContainer>
+      <NavbarContainer></NavbarContainer>
+      <ContentArea>
+        <Article
+          imageurl="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/695050/capsule_616x353.jpg?t=1572876316"
+          imagealt="Promo image of the videogame 'Rain of Reflections: Set free'"
+          children={<GameDevPost />}>
+        </Article>
+      </ContentArea>
     </>
   )
 }

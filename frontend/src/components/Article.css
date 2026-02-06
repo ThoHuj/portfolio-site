@@ -1,0 +1,12 @@
+.article {
+  text-align: left;
+  width: 600px;
+  margin-bottom: 200px;
+}
+
+.article-image {
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.article-paragraph {}
