@@ -3,6 +3,12 @@
   box-sizing: border-box;
 }
 
+#root {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
