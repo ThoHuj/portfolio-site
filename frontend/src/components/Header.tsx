@@ -9,7 +9,7 @@ type HeaderProps = {
 export default function HeaderContainer({ title, children }: HeaderProps) {
     return (
         <header className="header-container">
-            <h1>{title}</h1>
+            <h1 className="header-text">{title}</h1>
             {children}
         </header>
     );
