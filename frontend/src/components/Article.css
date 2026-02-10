@@ -2,6 +2,9 @@
   text-align: left;
   width: 600px;
   margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .article-image {
