@@ -22,8 +22,9 @@ function App() {
 
   return (
     <>
-      <HeaderContainer title="Thom Hujanen"></HeaderContainer>
-      <NavbarContainer></NavbarContainer>
+      <HeaderContainer title="Thom Hujanen">
+        <NavbarContainer />
+      </HeaderContainer>
       <ContentArea>
         <Article
           imageurl="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/695050/capsule_616x353.jpg?t=1572876316"
