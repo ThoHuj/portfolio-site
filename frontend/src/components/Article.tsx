@@ -9,9 +9,9 @@ type ArticleProps = {
 
 export default function Article({ imageurl, imagealt, children }: ArticleProps) {
     return (
-        <div className="article">
+        <div className="article-container">
             <img className="article-image" src={imageurl} alt={imagealt}></img>
-            <p className="article-paragraph">{children}</p>
+            <div className="article-body">{children}</div>
         </div>
     );
 }

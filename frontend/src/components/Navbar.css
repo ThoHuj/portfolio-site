@@ -1,11 +1,10 @@
 .navbar-container {
-  padding-bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: clamp(6px, 2vw, 10px);
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  padding-inline: 5%;
+  padding: 2%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
