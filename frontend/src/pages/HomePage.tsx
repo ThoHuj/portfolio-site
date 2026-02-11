@@ -1,8 +1,5 @@
 import React from 'react'
-import HeaderContainer from "../components/Header.tsx"
-import ContentArea from "../components/ContentArea.tsx"
 import Article from "../components/Article.tsx"
-import NavbarContainer from "../components/Navbar.tsx"
 import GameDevPost from "../assets/GameDevPost.mdx"
 import NavButton from '../components/NavButton.tsx'
 
