@@ -9,19 +9,6 @@ import GameDevPost from "./assets/GameDevPost.mdx"
 const article = <GameDevPost />
 
 function App() {
-  /*   const [message, setMessage] = useState<string>("Fetching data...")
-  
-    useEffect(() => {
-      fetch("http://localhost:8000/")
-        .then((response) => response.json())
-        .then((data) => {
-          setMessage(data.message)
-        })
-        .catch((error) => {
-          console.error("Fetching data failed:", error)
-          setMessage("Failed to fetch data from backend!")
-        })
-    }, []) */
 
   return (
     <>
