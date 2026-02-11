@@ -4,6 +4,9 @@ import ContentArea from "./components/ContentArea.tsx"
 import Article from "./components/Article.tsx"
 import NavbarContainer from "./components/Navbar.tsx"
 import GameDevPost from "./assets/GameDevPost.mdx"
+// import PythonPost from "./assets/PythonPost.mdx"
+
+const article = <GameDevPost />
 
 function App() {
   /*   const [message, setMessage] = useState<string>("Fetching data...")
@@ -29,7 +32,7 @@ function App() {
         <Article
           imageurl="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/695050/capsule_616x353.jpg?t=1572876316"
           imagealt="Promo image of the videogame 'Rain of Reflections: Set free'"
-          children={<GameDevPost />}>
+          children={article}>
         </Article>
       </ContentArea>
     </>
