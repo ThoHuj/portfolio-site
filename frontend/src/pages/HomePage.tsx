@@ -1,7 +1,13 @@
 import CardBar from '../components/CardBar.tsx'
 import Footer from '../components/Footer.tsx'
+import { useState } from 'react'
+import ArticleRoR from '../articles/ArticleRoR.tsx';
+
+
 
 function HomePage() {
+    const [mainContent, setMainContent] = useState("CardBar");
+
     return (
         <div className="p-1 flex flex-col items-center text-gray-200">
             <header className="min-w-[80vw] flex flex-col items-center">
@@ -11,7 +17,9 @@ function HomePage() {
             <main className="w-screen py-6 flex flex-col items-center
             bg-[linear-gradient(90deg,transparent_10%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_60%,transparent_90%)]
             ">
-                <CardBar />
+                <button onClick={() => setMainContent("Article")}>Tryck inte här!</button>
+            {mainContent === "CardBar" && <CardBar />}
+            {mainContent === "Article" && <ArticleRoR />}
             </main>
             <footer className="">
                 <Footer />
