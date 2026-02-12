@@ -6,12 +6,32 @@ type CategoryCardProps = {
 
 function CategoryCard({ title, imageurl, body }: CategoryCardProps) {
   return (
-    <button className="bg-gray-800 rounded-2xl border-b border-black max-w-70 overflow-hidden">
-        <img className="max-w-full h-40 border-t border-t-white/30" src={imageurl}></img>
-        <h2 className="font-semibold text-left border-t border-t-black/20 text-2xl p-2 bg-gray-900 font-">{title}</h2>
-        <p className="text-left p-2 min-h-30 border-t border-t-black/40">{body}</p>
-        {/* <div className="p-2 bg-linear-to-t from-black/35 to-transparent">Read More</div> */}
-    </button>
+    <a className="
+      group relative flex flex-col
+      max-w-[18rem] overflow-hidden rounded-2xl cursor-pointer
+      bg-gray-800 transition-all duration-300
+      border-t border-t-white/20 hover:border-t-white/40
+      border-b hover:border-b-2 border-b-black/60 hover:border-b-black
+    ">
+      <div className="
+        absolute inset-0 z-10 pointer-events-none 
+        bg-linear-to-b from-white/4 to-black/5 
+        opacity-0 transition-opacity duration-100 group-hover:opacity-100
+      " />
+      <img 
+        src={imageurl} 
+        alt={title} 
+        className="h-40 w-full object-cover border-b border-white/10" 
+      />
+      <div className="relative z-20">
+        <h2 className="p-3 text-2xl text-white">
+          {title}
+        </h2>
+        <p className="min-h-32 border-t border-white/10 p-3 text-gray-300">
+          {body}
+        </p>
+      </div>
+    </a>
   )
 }
 
