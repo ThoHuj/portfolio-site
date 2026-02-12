@@ -1,12 +1,18 @@
 
 type NavButtonProps = {
     text: string;
+    url: string;
 }
 
-export default function NavButton({ text }: NavButtonProps) {
+export default function NavButton({ text, url }: NavButtonProps) {
     return (
-        <button className="p-2 rounded-2xl border-b cursor-pointer hover:bg-amber-800">
-            {text}
-        </button>
-    );
+    <a 
+      href={url} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="px-4 py-2 border-t rounded-2xl border-white/20 hover:bg-white/20 cursor-pointer"
+    >
+      {text}
+    </a>
+  );
 }

@@ -2,7 +2,7 @@ import CategoryCard from './CategoryCard'
 
 export default function CardBar() {
   return (
-    <div className="flex gap-6 flex-wrap justify-center mt-6">
+    <div className="flex gap-6 flex-wrap justify-center">
         <CategoryCard
         title="Fullstack" 
         imageurl="https://i.redd.it/a1ebq74mcl181.png" 
