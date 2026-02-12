@@ -1,12 +1,17 @@
+
 type CategoryCardProps = {
     title: string;
     imageurl: string;
     body: string;
+    mainContent: string;
+    onNavigate: (componentName: string) => void;
 }
 
-function CategoryCard({ title, imageurl, body }: CategoryCardProps) {
+function CategoryCard({ title, imageurl, body, onNavigate, mainContent }: CategoryCardProps) {
   return (
-    <a className="
+    <a 
+    onClick={() => onNavigate(mainContent)}
+    className="
       group relative flex flex-col
       max-w-[18rem] overflow-hidden rounded-2xl cursor-pointer
       bg-gray-800 transition-all duration-300

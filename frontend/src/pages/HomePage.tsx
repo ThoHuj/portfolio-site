@@ -17,9 +17,8 @@ function HomePage() {
                 </button>
             </header>
             <main className="w-screen py-6 flex flex-col items-center
-            bg-[linear-gradient(90deg,transparent_10%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_60%,transparent_90%)]
-            ">
-                {mainContent === "CardBar" && <CardBar />}
+                             bg-[linear-gradient(90deg,transparent_10%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_60%,transparent_90%)]">
+                {mainContent === "CardBar" && <CardBar onNavigate={setMainContent}/>}
                 {mainContent === "Article" && <ArticleRoR />}
             </main>
             <footer className="">
