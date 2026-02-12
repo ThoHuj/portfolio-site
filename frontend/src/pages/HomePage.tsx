@@ -1,32 +1,22 @@
-import React from 'react'
-import Article from "../components/Article.tsx"
-import GameDevPost from "../assets/GameDevPost.mdx"
+/* import React from 'react' */
 import NavButton from '../components/NavButton.tsx'
-
-const article = <GameDevPost />
+import ArticleRoR from '../articles/ArticleRoR.tsx'
 
 function HomePage() {
     return (
-        <>
-            <div>
-                <header className="header-container">
-                    <h1 className="header-text">Thom Hujanen</h1>
-                    <nav className="navbar-container">
-                        <NavButton text="Game Dev"></NavButton>
-                        <NavButton text="Python"></NavButton>
-                    </nav>
-                </header>
-                <main className="content-area">
-                    <Article
-                        imageurl="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/695050/capsule_616x353.jpg?t=1572876316"
-                        imagealt="Promo image of the videogame 'Rain of Reflections: Set free'"
-                        children={article}>
-                    </Article>
-                </main>
-
-
-            </div >
-        </>
+        <div className="p-1 flex flex-col items-center text-amber-50">
+            <header className="header-container">
+                <h1 className="p-2 text-center text-4xl ">Thom Hujanen</h1>
+                <h2 className="pb-2 border-b text-nowrap" >Fullstack | AI & ML | Game Developer</h2>
+                <nav className="p-2 flex justify-center gap-2">
+                    <NavButton text="Game Dev"></NavButton>
+                    <NavButton text="Python"></NavButton>
+                </nav>
+            </header>
+            <main className="flex flex-col items-center">
+                <ArticleRoR />
+            </main>
+        </div >
     )
 }
 
