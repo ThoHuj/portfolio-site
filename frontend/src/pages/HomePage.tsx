@@ -1,6 +1,5 @@
-/* import React from 'react' */
 import NavButton from '../components/NavButton.tsx'
-import ArticleRoR from '../articles/ArticleRoR.tsx'
+import CardBar from '../components/CardBar.tsx'
 
 function HomePage() {
     return (
@@ -14,7 +13,7 @@ function HomePage() {
                 </nav>
             </header>
             <main className="flex flex-col items-center">
-                <ArticleRoR />
+                <CardBar />
             </main>
         </div >
     )
