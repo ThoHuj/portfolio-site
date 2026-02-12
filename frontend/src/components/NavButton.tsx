@@ -11,7 +11,7 @@ export default function NavButton({ text, url }: NavButtonProps) {
       target="_blank" 
       rel="noopener noreferrer"
       className="
-      px-4 py-2 
+      px-4 py-2
       bg-linear-to-b from-transparent hover:from-white/4 to-black/0 hover:to-black/5 
       transition-all duration-100 
       border-t rounded-2xl border-t-white/20 hover:border-t-white/40 
