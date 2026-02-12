@@ -6,11 +6,11 @@ type CategoryCardProps = {
 
 function CategoryCard({ title, imageurl, body }: CategoryCardProps) {
   return (
-    <button className="cursor-pointer bg-blue-300 rounded-2xl border max-w-90">
-        <h2 className="text-2xl p-2">{title}</h2>
-        <img className="max-w-full max-h-40" src={imageurl}></img>
-        <p className="text-left p-2 min-h-30">{body}</p>
-        <div className="bg-amber-950 p-2 rounded-b-2xl">Read More</div>
+    <button className="cursor-pointer bg-gray-800 rounded-2xl border-b border-black/100 max-w-70 overflow-hidden">
+        <img className="max-w-full h-40 border-t border-t-white/30" src={imageurl}></img>
+        <h2 className="font-semibold text-left border-t border-t-black/20 text-2xl p-2 bg-gray-900 font-">{title}</h2>
+        <p className="text-left p-2 min-h-30 border-t border-t-black/40">{body}</p>
+        <div className="p-2 bg-linear-to-t from-black/35 to-transparent">Read More</div>
     </button>
   )
 }

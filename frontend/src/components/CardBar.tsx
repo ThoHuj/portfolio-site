@@ -2,19 +2,19 @@ import CategoryCard from './CategoryCard'
 
 export default function CardBar() {
   return (
-    <div className="flex gap-6 flex-wrap justify-center">
+    <div className="flex gap-6 flex-wrap justify-center mt-6">
         <CategoryCard
         title="Fullstack" 
-        imageurl="https://miro.medium.com/0*XH3rLskyOsCqVV-j.jpg" 
-        body="I'm a Fullstack dev, baby!" />
+        imageurl="https://i.redd.it/a1ebq74mcl181.png" 
+        body="Educated in fullstack & DevOps development. Skilled in designing systems, databases, APIs & deployment of web applications." />
         <CategoryCard 
         title="AI & ML" 
-        imageurl="https://miro.medium.com/0*XH3rLskyOsCqVV-j.jpg" 
-        body="I'm a Fullstack dev, baby!" />
+        imageurl="https://cdn.i-scmp.com/sites/default/files/styles/700x400/public/d8/images/canvas/2025/07/10/0355f1da-90cd-40ec-a5a9-b96670a2aa8b_d08379d6.jpg?itok=9RzHlip3&v=1752155786" 
+        body="Studying implementaton and deployment of artificial intelligence & machine learning systems." />
         <CategoryCard 
         title="Game Dev" 
-        imageurl="https://miro.medium.com/0*XH3rLskyOsCqVV-j.jpg" 
-        body="I'm a Fullstack dev, baby!" />
+        imageurl="https://a.storyblok.com/f/158607/1920x1080/4ddf5af627/egs_goatsimulator3_theshadiestupdate_banner1920x1080-notext.jpg/m/fit-in/600x600" 
+        body="Bachelor's degree in Game Design with over 5 years workng in the industry." />
     </div>
   )
 }
