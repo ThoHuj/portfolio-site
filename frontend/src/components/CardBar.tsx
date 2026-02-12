@@ -14,7 +14,7 @@ export default function CardBar() {
         <CategoryCard 
         title="Game Dev" 
         imageurl="https://a.storyblok.com/f/158607/1920x1080/4ddf5af627/egs_goatsimulator3_theshadiestupdate_banner1920x1080-notext.jpg/m/fit-in/600x600" 
-        body="Bachelor's degree in Game Design with over 5 years workng in the industry." />
+        body="Bachelor's degree in Game Design with over 5 years working in the industry." />
     </div>
   )
 }
