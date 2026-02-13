@@ -14,13 +14,13 @@ export default function CardBar({ onNavigate }: CardBarProps) {
         imageurl="https://i.redd.it/a1ebq74mcl181.png"
         body="Educated in fullstack & DevOps development. Skilled in designing systems, databases, APIs & deployment of web applications." />
       <CategoryCard
-        mainContent="Article"
+        mainContent="ArticleAIML"
         onNavigate={onNavigate}
         title="AI & ML"
         imageurl="https://cdn.i-scmp.com/sites/default/files/styles/700x400/public/d8/images/canvas/2025/07/10/0355f1da-90cd-40ec-a5a9-b96670a2aa8b_d08379d6.jpg?itok=9RzHlip3&v=1752155786"
         body="Studying implementaton and deployment of artificial intelligence & machine learning systems." />
       <CategoryCard
-        mainContent="Article"
+        mainContent="ArticleRoR"
         onNavigate={onNavigate}
         title="Game Dev"
         imageurl="https://a.storyblok.com/f/158607/1920x1080/4ddf5af627/egs_goatsimulator3_theshadiestupdate_banner1920x1080-notext.jpg/m/fit-in/600x600"
