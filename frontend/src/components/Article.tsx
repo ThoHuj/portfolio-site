@@ -9,7 +9,7 @@ type ArticleProps = {
 export default function Article({ imageurl, imagealt, children }: ArticleProps) {
     return (
         <div className="
-            max-w-150 mt-2 mx-6 flex flex-col items-center rounded-2xl
+            max-w-150 mx-6 flex flex-col items-center rounded-2xl
             bg-gray-800
             border-t border-t-white/20
             border-b border-b-black/60
