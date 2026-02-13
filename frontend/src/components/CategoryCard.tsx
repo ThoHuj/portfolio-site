@@ -29,7 +29,7 @@ function CategoryCard({ title, imageurl, body, onNavigate, mainContent }: Catego
         className="h-40 w-full object-cover border-b border-white/10"
       />
       <div className="relative z-20">
-        <h2 className="p-3 text-2xl">
+        <h2 className="p-3 text-2xl font-semibold">
           {title}
         </h2>
         <p className="min-h-32 border-t border-white/10 p-3">

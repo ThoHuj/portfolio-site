@@ -20,7 +20,7 @@ function HomePage() {
         <div className="p-1 flex flex-col items-center text-gray-200 font-normal">
             <header className="min-w-[80vw] flex flex-col items-center">
                 <button onClick={() => setMainContent("CardBar")} className="min-w-[80vw] cursor-pointer">
-                    <h1 className="p-2 text-center text-5xl">Thom Hujanen</h1>
+                    <h1 className="p-2 text-center text-5xl font-semibold">Thom Hujanen</h1>
                     <h2 className="pb-2 w-full border-b border-white/30 text-nowrap text-center" >~ {randomSubheading} ~</h2>
                 </button>
             </header>
