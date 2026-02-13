@@ -16,12 +16,17 @@ export default function Article({ imageurl, imagealt, children }: ArticleProps) 
         ">
             <img className="border-b border-white/10 rounded-t-2xl" src={imageurl} alt={imagealt}></img>
             <div className="
-                p-2 prose-h2:text-2xl
-                prose-h2:py-4
+                p-6
+                prose-h2:text-2xl
+                prose-h2:first:mt-0
+                prose-h2:mt-4
+                prose-h2:border-b 
+                prose-h2:border-white/10
                 prose-ul:list-disc
                 prose-ul:list-inside
                 prose-ul:space-y-2
                 prose-ul:p-4
+                prose-p:mt-2
                 ">{children}
             </div>
         </div>
