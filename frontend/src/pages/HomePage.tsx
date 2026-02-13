@@ -2,6 +2,7 @@ import CardBar from '../components/CardBar.tsx'
 import Footer from '../components/Footer.tsx'
 import { useState } from 'react'
 import ArticleRoR from '../articles/ArticleRoR.tsx';
+import ArticleFullstack from '../articles/ArticleFullstack.tsx'
 
 const titletexts: string[] = [
     "a revolutionary device",
@@ -28,6 +29,7 @@ function HomePage() {
                              bg-[linear-gradient(90deg,transparent_10%,rgba(0,0,0,0.15)_40%,rgba(0,0,0,0.15)_60%,transparent_90%)]">
                 {mainContent === "CardBar" && <CardBar onNavigate={setMainContent} />}
                 {mainContent === "Article" && <ArticleRoR />}
+                {mainContent === "ArticleFullstack" && <ArticleFullstack />}
             </main>
             <footer className="">
                 <Footer />
