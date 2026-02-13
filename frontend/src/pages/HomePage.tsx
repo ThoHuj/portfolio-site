@@ -9,6 +9,7 @@ const titletexts: string[] = [
     "it just works",
     "incredibly fast"
 ]
+
 const randomSubheading = titletexts[Math.floor(Math.random() * titletexts.length)];
 
 function HomePage() {
