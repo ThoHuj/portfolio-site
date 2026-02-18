@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout.tsx'
 import HomePage from './pages/HomePage.tsx'
 import FullstackPage from './pages/FullstackPage.tsx'
+import AiMlPage from './pages/AiMlPage.tsx'
+import GameDevPage from './pages/GameDevPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -15,8 +17,16 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/fullstack",
+        path: "/Fullstack",
         element: <FullstackPage />,
+      },
+      {
+        path: "/AiMl",
+        element: <AiMlPage />,
+      },
+      {
+        path: "/GameDev",
+        element: <GameDevPage />,
       },],
   }
 ])
