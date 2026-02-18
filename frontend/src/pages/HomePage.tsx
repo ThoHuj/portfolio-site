@@ -1,5 +1,4 @@
 import CardBar from '../components/CardBar.tsx'
-import Footer from '../components/Footer.tsx'
 import { useState } from 'react'
 import ArticleRoR from '../articles/ArticleRoR.tsx';
 import ArticleFullstack from '../articles/ArticleFullstack.tsx'
