@@ -5,7 +5,7 @@ const article = {
     "imagealt": "Linux"
 }
 
-function ArticleRoR() {
+function ArticleFullstack() {
     return (
         <Article imageurl={article.imageurl} imagealt={article.imagealt}>
             <h2>
@@ -27,4 +27,4 @@ function ArticleRoR() {
     );
 }
 
-export default ArticleRoR
+export default ArticleFullstack

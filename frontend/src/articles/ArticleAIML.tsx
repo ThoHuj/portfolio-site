@@ -5,7 +5,7 @@ const article = {
     "imagealt": "AI & ML"
 }
 
-function ArticleRoR() {
+function ArticleAIML() {
     return (
         <Article imageurl={article.imageurl} imagealt={article.imagealt}>
             <h2>
@@ -27,4 +27,4 @@ function ArticleRoR() {
     );
 }
 
-export default ArticleRoR
+export default ArticleAIML
