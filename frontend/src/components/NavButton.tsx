@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 
 type NavButtonProps = {
-    text: string;
-    url: string;
+  text: string;
+  url: string;
 }
 
 export default function NavButton({ text, url }: NavButtonProps) {
-    return (
-    <a 
-      href={url} 
-      target="_blank" 
+  return (
+    <Link
+      to={url}
+      target="_blank"
       rel="noopener noreferrer"
       className="
       px-4 py-2
@@ -20,6 +21,6 @@ export default function NavButton({ text, url }: NavButtonProps) {
       "
     >
       {text}
-    </a>
+    </Link>
   );
 }
