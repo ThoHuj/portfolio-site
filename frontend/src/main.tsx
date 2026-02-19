@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage.tsx'
 import FullstackPage from './pages/FullstackPage.tsx'
 import AiMlPage from './pages/AiMlPage.tsx'
 import GameDevPage from './pages/GameDevPage.tsx'
+import ArticlePage from './pages/ArticlePage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,12 @@ const router = createBrowserRouter([
       {
         path: "/GameDev",
         element: <GameDevPage />,
-      },],
+      },
+      {
+        path: "/Fullstack2",
+        element: <ArticlePage articleId={2}></ArticlePage>,
+      },
+    ],
   }
 ])
 
