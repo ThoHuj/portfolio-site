@@ -78,5 +78,5 @@ def list_cards(category_id: int | None = None):
     return card_data
 
 @app.get("/article")
-def list_cards(article_id: int):
+def get_article_by_id(article_id: int):
     return article_data[(article_id)]
