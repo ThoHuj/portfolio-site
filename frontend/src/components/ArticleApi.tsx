@@ -1,7 +1,11 @@
 
 type ArticleProps = {
     headerUrl: string;
-    contentJson: [];
+    contentJson: {
+        type: string,
+        content: string,
+    }[];
+
 };
 
 export default function ArticleApi({ headerUrl, contentJson }: ArticleProps) {
@@ -28,7 +32,7 @@ export default function ArticleApi({ headerUrl, contentJson }: ArticleProps) {
                 prose-ul:p-4
                 prose-p:mt-4
                 ">
-                {contentJson?.map((block) => {
+                {contentJson.map((block) => {
                     switch (block.type) {
                         case "h2":
                             return <h2>{block.content}</h2>

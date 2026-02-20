@@ -1,28 +1,46 @@
 import { useEffect, useState } from "react"
-import ArticleApi from "../components/ArticleApi"
+
 
 type ArticlePageProps = {
     articleId: number
 }
 
-export default function ArticlePage(props: ArticlePageProps) {
-    const [articleData, setArticleData] = useState({})
+type ArticleDataProps = {
+    id: number,
+    categoryId: number,
+    title: string,
+    summary: string,
+    headerUrl: string,
+    contentJson: {
+        id: string,
+        type: string,
+        content: string,
+        items: string[]
+    }[]
+}
 
-    async function fetchArticleData() {
-        const endpoint = "http://localhost:8000/article?article_id=" + props.articleId
-        try {
-            const response = await fetch(endpoint);
-            const data = await response.json();
-            console.log(data);
-            setArticleData(data);
-        } catch (error) {
-            console.log(error);
-        }
-    };
+export default function ArticlePage(props: ArticlePageProps) {
+    const [articleData, setArticleData] = useState<ArticleDataProps>()
 
     useEffect(() => {
-        fetchArticleData();
-    }, []);
+        async function fetchArticleData() {
+            const endpoint = "http://localhost:8000/article?article_id=" + props.articleId
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+                console.log(data);
+                setArticleData(data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchArticleData()
+    }, [props.articleId]);
+
+
+    if (!articleData) {
+        return;
+    }
 
     return (
         <main className="w-screen py-6 flex flex-col items-center

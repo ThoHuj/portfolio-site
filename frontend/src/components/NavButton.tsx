@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 
 type NavButtonProps = {
-  text: string;
-  url: string;
+    text: string;
+    url: string;
 }
 
 export default function NavButton({ text, url }: NavButtonProps) {
-  return (
-    <Link
-      to={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="
+    return (
+        <Link
+            to={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
       px-4 py-2
       bg-linear-to-b from-transparent hover:from-white/4 to-black/0 hover:to-black/5 
       transition-all duration-100 
@@ -19,8 +19,8 @@ export default function NavButton({ text, url }: NavButtonProps) {
       border-b border-b-black hover:border-b-black/50 hover:border-b-2 
       cursor-pointer
       "
-    >
-      {text}
-    </Link>
-  );
+        >
+            {text}
+        </Link>
+    );
 }
