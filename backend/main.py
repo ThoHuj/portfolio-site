@@ -15,19 +15,19 @@ card_data = [{
             "title": "Fullstack",
             "summary": "Educated in fullstack & DevOps development. Skilled in designing systems, databases, APIs & deployment of web applications.",
             "imageSrc": "https://i.redd.it/a1ebq74mcl181.png",
-            "targetUrl": "/fullstack",
+            "targetUrl": "/articles/0",
             },
             {
             "title": "AI & ML",
             "summary": "Studying implementaton and deployment of artificial intelligence & machine learning systems.",
             "imageSrc": "https://cdn.i-scmp.com/sites/default/files/styles/700x400/public/d8/images/canvas/2025/07/10/0355f1da-90cd-40ec-a5a9-b96670a2aa8b_d08379d6.jpg?itok=9RzHlip3&v=1752155786",
-            "targetUrl": "/AiMl",
+            "targetUrl": "/articles/1",
             },
             {
             "title": "Game Dev",
             "summary": "Bachelor's degree in Game Design with over 5 years working in the industry.",
             "imageSrc": "https://a.storyblok.com/f/158607/1920x1080/4ddf5af627/egs_goatsimulator3_theshadiestupdate_banner1920x1080-notext.jpg/m/fit-in/600x600",
-            "targetUrl": "/GameDev",
+            "targetUrl": "/articles/2",
             },
             ]
 
@@ -47,7 +47,7 @@ article_data = [
      "categoryId": 1,
      "title": "AI & ML Engineer",
      "summary": "Studying implementaton and deployment of artificial intelligence & machine learning systems.",
-     "headerUrl": "./src/assets/iStock-1483013789.jpg",
+     "headerUrl": "https://www.actian.com/wp-content/uploads/2024/02/how-to-train-generative-AI-actian-hero.webp",
      "contentJson": [{"id": 0,"type": "h2","content": "AI & ML Engineer"}, 
                      {"id": 1, "type": "p", "content": "After many years in game devlopment, I got curious about other areas to work in as a developer. I therefore studied the AI & ML Engineer programme at Teknikhögskolan in Stockholm, Sweden."},
                      {"id": 2, "type": "p", "content": "Since we haven't started learning the subject of AI & ML yet, I don't have much to say about it, except that I am looking forward to it very much."},
@@ -77,6 +77,6 @@ app.add_middleware(
 def list_cards(category_id: int | None = None):
     return card_data
 
-@app.get("/article")
+@app.get("/articles/{article_id}")
 def get_article_by_id(article_id: int):
     return article_data[(article_id)]

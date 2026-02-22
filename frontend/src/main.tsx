@@ -15,16 +15,8 @@ const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: "/Fullstack",
-                element: <ArticlePage articleId={0}></ArticlePage>,
-            },
-            {
-                path: "/AiMl",
-                element: <ArticlePage articleId={1}></ArticlePage>,
-            },
-            {
-                path: "/GameDev",
-                element: <ArticlePage articleId={2}></ArticlePage>,
+                path: "/articles/:article_id",
+                element: <ArticlePage />,
             },
         ],
     }

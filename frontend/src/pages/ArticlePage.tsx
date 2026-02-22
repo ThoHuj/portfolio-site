@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react"
-
-
-type ArticlePageProps = {
-    articleId: number
-}
+import { useParams } from "react-router-dom"
 
 type ArticleDataProps = {
     id: number,
@@ -19,12 +15,14 @@ type ArticleDataProps = {
     }[]
 }
 
-export default function ArticlePage(props: ArticlePageProps) {
-    const [articleData, setArticleData] = useState<ArticleDataProps>()
+export default function ArticlePage() {
+    const [articleData, setArticleData] = useState<ArticleDataProps>();
+    const { article_id } = useParams();
 
     useEffect(() => {
-        async function fetchArticleData() {
-            const endpoint = "http://localhost:8000/article?article_id=" + props.articleId
+        async function fetchArticleData(article_id: string) {
+
+            const endpoint = `http://localhost:8000/articles/${article_id}`
             try {
                 const response = await fetch(endpoint);
                 const data = await response.json();
@@ -34,8 +32,8 @@ export default function ArticlePage(props: ArticlePageProps) {
                 console.log(error);
             }
         };
-        fetchArticleData()
-    }, [props.articleId]);
+        if (article_id) { fetchArticleData(article_id) };
+    }, [article_id]);
 
 
     if (!articleData) {
