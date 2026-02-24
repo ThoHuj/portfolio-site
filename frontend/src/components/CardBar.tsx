@@ -1,30 +1,36 @@
 import CategoryCard from './CategoryCard'
 import { useEffect, useState } from 'react'
 
+type CardBarProps = {
+    categoryName: string | undefined;
+    subcategoryName: string | undefined
+}
 
-export default function CardBar() {
+export default function CardBar(props: CardBarProps) {
     const [cards, setCards] = useState<{
-        targetUrl: string,
-        title: string,
-        imageSrc: string,
-        summary: string
-    }[]>
-        ();
+        id: BigInteger;
+        type: string;
+        title: string;
+        url_title: string;
+        header_img_url: string;
+        summary: string;
+    }[]>();
 
     useEffect(() => {
-        async function fetchCardData(parentCategoryName: string) {
-            const endpoint = "http://localhost:8000/cards" + parentCategoryName
+        async function fetchCardData(categoryName: string | undefined, subcategoryName: string | undefined) {
+            let endpoint = `http://localhost:8000/${categoryName}`
+            if (subcategoryName) { endpoint = `${endpoint}/${subcategoryName}` }
             try {
                 const response = await fetch(endpoint);
                 const data = await response.json();
-                console.log(data);
                 setCards(data);
             } catch (error) {
                 console.log(error);
             }
         };
-        fetchCardData("");
-    }, []);
+        fetchCardData(props.categoryName, props.subcategoryName);
+
+    }, [props]);
 
     if (!cards) {
         return;
@@ -32,11 +38,8 @@ export default function CardBar() {
 
     return (
         <div className="flex gap-6 flex-wrap justify-center">
-            {cards.map((card) => <CategoryCard
-                targetUrl={card.targetUrl}
-                title={card.title}
-                imageUrl={card.imageSrc}
-                body={card.summary} />)
+            {cards.map((card) =>
+                <CategoryCard cardData={card} />)
             }
         </div>
 

@@ -1,13 +1,22 @@
 import { Link } from "react-router-dom"
 
 type CategoryCardProps = {
-    title: string;
-    imageUrl: string;
-    body: string;
-    targetUrl: string;
+    cardData: {
+        id: BigInteger,
+        type: string,
+        title: string,
+        url_title: string,
+        header_img_url: string,
+        summary: string,
+    }
 }
 
-function CategoryCard({ title, imageUrl, body, targetUrl }: CategoryCardProps) {
+function CategoryCard(props: CategoryCardProps) {
+    const cardData = props.cardData
+    let targetUrl = ""
+    if (cardData.type == "article") { targetUrl = `/articles/${cardData.id}` }
+    else { targetUrl = `${cardData.url_title}` }
+
     return (
         <Link to={targetUrl} className="
       group relative flex flex-col
@@ -22,16 +31,16 @@ function CategoryCard({ title, imageUrl, body, targetUrl }: CategoryCardProps) {
         opacity-0 transition-opacity duration-100 group-hover:opacity-100
       " />
             <img
-                src={imageUrl}
-                alt={title}
+                src={cardData.header_img_url}
+                alt={cardData.title}
                 className="h-40 w-full object-cover border-b border-white/10"
             />
             <div className="relative z-20">
                 <h2 className="p-3 text-2xl font-semibold">
-                    {title}
+                    {cardData.title}
                 </h2>
                 <p className="min-h-32 border-t border-white/10 p-3">
-                    {body}
+                    {cardData.summary}
                 </p>
             </div>
         </Link>

@@ -6,7 +6,7 @@ type ArticleDataProps = {
     categoryId: number,
     title: string,
     summary: string,
-    headerUrl: string,
+    header_img_url: string,
     contentJson: {
         id: string,
         type: string,
@@ -26,7 +26,6 @@ export default function ArticlePage() {
             try {
                 const response = await fetch(endpoint);
                 const data = await response.json();
-                console.log(data);
                 setArticleData(data);
             } catch (error) {
                 console.log(error);
@@ -49,7 +48,7 @@ export default function ArticlePage() {
             border-t border-t-white/20
             border-b border-b-black/60
             ">
-                <img className="border-b border-white/10 rounded-t-2xl" src={articleData.headerUrl} alt=""></img>
+                <img className="border-b border-white/10 rounded-t-2xl" src={articleData.header_img_url} alt=""></img>
                 <div className="
                 p-6
                 prose-h2:font-semibold

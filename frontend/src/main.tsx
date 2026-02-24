@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client'
 import './global.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout.tsx'
-import HomePage from './pages/HomePage.tsx'
+import CardPage from './pages/CardPage.tsx'
 import ArticlePage from './pages/ArticlePage.tsx'
 
 const router = createBrowserRouter([
@@ -12,7 +12,15 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <HomePage />,
+                element: <CardPage />,
+            },
+            {
+                path: "/:category",
+                element: <CardPage />,
+            },
+            {
+                path: "/:category/:subcategory",
+                element: <CardPage />,
             },
             {
                 path: "/articles/:article_id",
